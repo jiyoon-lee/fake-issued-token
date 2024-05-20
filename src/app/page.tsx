@@ -48,7 +48,7 @@ export default function Home() {
   );
 
   const handleIssuedToken = useCallback(async () => {
-    const res = await fetch("http://100.100.106.169/api/token", {
+    const res = await fetch("/api/token", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
