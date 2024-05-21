@@ -14,6 +14,6 @@ export const tokenInfo = {
   authKey: "G872K112H",
 };
 
-export const redirectUrl = "http://localhost:3000";
+export const redirectUrl = "http://100.100.106.169:3000";
 
 export const addParameter = "access_token";

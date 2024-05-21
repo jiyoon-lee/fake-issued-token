@@ -66,7 +66,7 @@ export default function Home() {
   }, [redirectUrl, addParameter]);
 
   return (
-    <div className="h-screen flex justify-center flex-col items-center bg-cool-background">
+    <div className="h-screen flex justify-center flex-col items-center">
       <h1 className="font-semibold text-3xl text-white mb-10">
         SWAT 대체 토큰 발급용 페이지
       </h1>
