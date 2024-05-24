@@ -20,9 +20,7 @@ export default function Home() {
 
   useEffect(() => {
     if (accessToken && refreshToken) {
-      setAddParameter(
-        `access_token=${accessToken}&refresh_token=${refreshToken}`
-      );
+      setAddParameter(`access=${accessToken}&refresh=${refreshToken}`);
     }
   }, [accessToken, refreshToken]);
 
