@@ -10,10 +10,8 @@ export const tokenInfo = {
     userName: "사용자 이름",
     userLevel: "사용자 등급",
   },
-  url: "http://100.100.107.248:5009/api/request",
+  url: "http://localhost:3000/api/request",
   authKey: "G872K112H",
 };
 
 export const redirectUrl = "http://100.100.106.169:3000";
-
-export const addParameter = "access_token";

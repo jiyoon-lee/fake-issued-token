@@ -54,8 +54,8 @@ export default function Home() {
       body: JSON.stringify(tokenInfo),
     });
     const token = await res.json();
-    token?.access_token && setAccessToken(token.access_token);
-    token?.refresh_token && setRefreshToken(token.refresh_token);
+    token?.accessToken && setAccessToken(token.accessToken);
+    token?.refreshToken && setRefreshToken(token.refreshToken);
   }, [tokenInfo]);
 
   const handleRedirect = useCallback(() => {

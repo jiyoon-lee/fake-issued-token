@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
   await TokenModel.updateRefreshToken(reqJson.user.userName, refreshToken);
 
   return new Response(
-    JSON.stringify({ access_token: token, refresh_token: refreshToken }),
+    JSON.stringify({ accessToken: token, refreshToken: refreshToken }),
     {
       status: 200,
     }
@@ -68,11 +68,10 @@ export async function PUT(req: NextRequest) {
       });
     } else {
       const newAccessToken = makeToken(decoded as TokenType);
-      console.log(newAccessToken);
       return new Response(
         JSON.stringify({
-          access_token: newAccessToken,
-          refresh_token: refreshToken,
+          accessToken: newAccessToken,
+          refreshToken,
         }),
         {
           status: 200,
