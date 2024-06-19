@@ -46,16 +46,16 @@ export default function Home() {
   );
 
   const handleIssuedToken = useCallback(async () => {
-    const res = await fetch("/api/token", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_PATH}/token`, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(tokenInfo),
+      body: tokenInfo,
     });
-    const token = await res.json();
-    token?.accessToken && setAccessToken(token.accessToken);
-    token?.refreshToken && setRefreshToken(token.refreshToken);
+    const { data } = await res.json();
+    data?.accessToken && setAccessToken(data.accessToken);
+    data?.refreshToken && setRefreshToken(data.refreshToken);
   }, [tokenInfo]);
 
   const handleRedirect = useCallback(() => {

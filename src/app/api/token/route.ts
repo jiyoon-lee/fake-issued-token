@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 
 export async function PUT(req: NextRequest) {
   const token = req.headers.get("Authorization");
-  const refreshToken = req.headers.get("Refresh");
+  const refreshToken = req.headers.get("RefreshToken");
   if (!token || !refreshToken)
     return new Response(
       "Access token and refresh token are need for refresh!",
